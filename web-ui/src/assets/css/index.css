@@ -1,0 +1,58 @@
+body {
+	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+		default;
+}
+a,
+button,
+img {
+	cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+		default;
+}
+
+ul {
+	padding: 0;
+}
+
+.v-toolbar__content,
+.v-toolbar__extension {
+	padding: 10px 36px;
+}
+
+.v-app-bar.v-toolbar.v-sheet {
+	background-color: rgba(0, 0, 0, 0);
+}
+.v-app-bar.v-toolbar.v-sheet a {
+	color: #eee;
+}
+
+.v-application {
+	background: linear-gradient(
+		90deg,
+		rgba(247, 149, 51, 0.1) 0,
+		rgba(243, 112, 85, 0.1) 15%,
+		rgba(239, 78, 123, 0.1) 30%,
+		rgba(161, 102, 171, 0.1) 44%,
+		rgba(80, 115, 184, 0.1) 58%,
+		rgba(16, 152, 173, 0.1) 72%,
+		rgba(7, 179, 155, 0.1) 86%,
+		rgba(109, 186, 130, 0.1) 100%
+	);
+	color: #4c4948;
+}
+
+.v-application a {
+	color: #4c4948;
+	text-decoration: none;
+}
+@keyframes main {
+	0% {
+		opacity: 0;
+		filter: alpha(opacity=0);
+		transform: translateY(50px);
+	}
+	100% {
+		opacity: 1;
+		filter: none;
+		transform: translateY(0);
+	}
+}

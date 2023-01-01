@@ -1,32 +1,28 @@
 <!--
  * @Author: Hui Tong <937013596@qq.com>
- * @Date: 2022-12-26 12:24:43
- * @LastEditTime: 2022-12-26 13:41:21
+ * @Date: 2022-12-27 13:55:32
+ * @LastEditTime: 2022-12-31 01:16:44
  * @Description: 
 -->
 <template>
-	<img alt="Vue logo" src="./assets/logo.png" />
-	<HelloWorld msg="Welcome to Your Vue.js App" />
+	<v-app id="app">
+		<TopBarVue></TopBarVue>
+		<v-main>
+			<router-view></router-view>
+		</v-main>
+	</v-app>
 </template>
 
 <script>
-	import HelloWorld from "./components/HelloWorld.vue";
-
+	import TopBarVue from "./components/ui/layout/TopBar.vue";
 	export default {
 		name: "App",
+
+		data: () => ({
+			//
+		}),
 		components: {
-			HelloWorld,
+			TopBarVue,
 		},
 	};
 </script>
-
-<style>
-	#app {
-		font-family: Avenir, Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
-		color: #2c3e50;
-		margin-top: 60px;
-	}
-</style>
