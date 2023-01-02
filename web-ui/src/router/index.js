@@ -1,10 +1,13 @@
 /*
  * @Author: Hui Tong <937013596@qq.com>
- * @Date: 2022-12-26 22:47:43
- * @LastEditTime: 2022-12-31 01:21:52
+ * @Date: 2023-01-02 00:46:58
+ * @LastEditTime: 2023-01-02 01:03:44
  * @Description:
  */
-import { createRouter, createWebHashHistory, createWebHistory } from "vue-router";
+import Vue from "vue";
+import VueRouter from "vue-router";
+
+Vue.use(VueRouter);
 
 const routes = [
 	{ path: "/", redirect: "/home" },
@@ -15,9 +18,10 @@ const routes = [
 	},
 ];
 
-const router = createRouter({
-    history: createWebHashHistory(),
-    routes: routes,
+const router = new VueRouter({
+	mode: "history",
+	base: process.env.BASE_URL,
+	routes,
 });
 
 export default router;

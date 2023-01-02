@@ -1,7 +1,7 @@
 <!--
  * @Author: Hui Tong <937013596@qq.com>
  * @Date: 2022-12-26 23:25:46
- * @LastEditTime: 2023-01-01 23:52:08
+ * @LastEditTime: 2023-01-02 22:30:24
  * @Description: 
 -->
 <template>
@@ -65,7 +65,7 @@
 <script>
 	export default {
 		data: () => ({
-            mini: true
+			mini: true,
 		}),
 		mounted() {
 			window.addEventListener("scroll", this.scroll);
@@ -80,21 +80,44 @@
 	ul {
 		list-style: none;
 	}
-	.nav-fixed {
-		position: fixed;
-		background-color: rgba(255, 255, 255, 0.5);
+	.nav {
+		background: rgba(0, 0, 0, 0) !important;
+	}
+	.nav a {
+		color: #eee !important;
+	}
+	.nav .menu-btn {
+		text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.3);
+	}
+	.nav .blog-logo a {
+		text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15);
+	}
+	.theme--light.nav-fixed {
+		background: rgba(255, 255, 255, 0.8) !important;
 		box-shadow: 0 5px 6px -5px rgba(133, 133, 133, 0.6);
-		height: 90px;
 	}
-	.nav-fixed a {
-		color: #181616;
+	.theme--dark.nav-fixed {
+		background: rgba(18, 18, 18, 0.8) !important;
 	}
-	.nav-fixed .menu-btn:hover {
-		color: #49b1f5;
+	.theme--dark.nav-fixed a {
+		color: rgba(255, 255, 255, 0.8) !important;
+	}
+	.theme--light.nav-fixed a {
+		color: #4c4948 !important;
 	}
 	.nav-fixed .menus-item a,
-	.nav-fixed .blog-title a {
+	.nav-fixed .blog-logo a {
 		text-shadow: none;
+	}
+	.nav-container {
+		font-size: 14px;
+		width: 100%;
+		height: 100%;
+	}
+	.nav-mobile-container {
+		width: 100%;
+		display: flex;
+		align-items: center;
 	}
 	.blog-logo,
 	.nav-title {
@@ -106,39 +129,37 @@
 		font-size: 18px;
 		font-weight: bold;
 	}
-	.menu-btn:hover:after {
-		width: 100%;
-	}
-	.nav-container {
-		font-size: 14px;
-		width: 100%;
-		height: 100%;
-	}
-	.blog-logo a {
-		text-shadow: none;
-	}
-
 	.menus-item {
 		position: relative;
 		display: inline-block;
 		margin: 0 0 0 0.875rem;
 	}
-	.menus-item:hover .menus-submenu {
-		display: block;
-	}
 	.menus-item a {
 		transition: all 0.2s;
+	}
+	.nav-fixed .menu-btn:hover {
+		color: #49b1f5 !important;
+	}
+	.menu-btn:hover:after {
+		width: 100%;
 	}
 	.menus-item a:after {
 		position: absolute;
 		bottom: -5px;
 		left: 0;
-		width: 0;
-		height: 2px;
 		z-index: -1;
-		background-color: #f78819;
+		width: 0;
+		height: 3px;
+		background-color: #80c8f8;
 		content: "";
 		transition: all 0.3s ease-in-out;
+	}
+	.user-avatar {
+		cursor: pointer;
+		border-radius: 50%;
+	}
+	.menus-item:hover .menus-submenu {
+		display: block;
 	}
 	.menus-submenu {
 		position: absolute;
@@ -158,21 +179,16 @@
 		height: 20px;
 		content: "";
 	}
-
 	.menus-submenu a {
 		line-height: 2;
-		color: #4c4948;
+		color: #4c4948 !important;
 		text-shadow: none;
 		display: block;
-		padding: 1px 14px;
-	}
-	.menus-submenu li {
-		float: left;
+		padding: 6px 14px;
 	}
 	.menus-submenu a:hover {
 		background: #4ab1f4;
 	}
-
 	@keyframes submenu {
 		0% {
 			opacity: 0;

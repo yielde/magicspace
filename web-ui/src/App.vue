@@ -1,20 +1,20 @@
 <!--
  * @Author: Hui Tong <937013596@qq.com>
- * @Date: 2022-12-27 13:55:32
- * @LastEditTime: 2022-12-31 01:16:44
+ * @Date: 2023-01-02 00:45:43
+ * @LastEditTime: 2023-01-02 01:10:58
  * @Description: 
 -->
 <template>
 	<v-app id="app">
 		<TopBarVue></TopBarVue>
-		<v-main>
-			<router-view></router-view>
-		</v-main>
+		<router-view></router-view>
+		<FooterBarVue></FooterBarVue>
 	</v-app>
 </template>
 
 <script>
 	import TopBarVue from "./components/ui/layout/TopBar.vue";
+	import FooterBarVue from "./components/ui/layout/FooterBar.vue";
 	export default {
 		name: "App",
 
@@ -23,6 +23,7 @@
 		}),
 		components: {
 			TopBarVue,
+			FooterBarVue,
 		},
 	};
 </script>
