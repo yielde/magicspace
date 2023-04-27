@@ -1,7 +1,7 @@
 <!--
  * @Author: Hui Tong <937013596@qq.com>
  * @Date: 2022-12-26 23:25:46
- * @LastEditTime: 2023-01-02 22:30:24
+ * @LastEditTime: 2023-01-02 22:34:13
  * @Description: 
 -->
 <template>
@@ -55,6 +55,16 @@
 				<div class="menus-item">
 					<router-link class="menu-btn" to="/">
 						<i class="iconfont icon-shouye" /> 友链
+					</router-link>
+				</div>
+				<div class="menus-item">
+					<router-link class="menu-btn" to="/">
+						<i class="iconfont icon-shouye" /> 站点收藏
+					</router-link>
+				</div>
+				<div class="menus-item">
+					<router-link class="menu-btn" to="/">
+						<i class="iconfont icon-shouye" /> 实用工具
 					</router-link>
 				</div>
 			</div>

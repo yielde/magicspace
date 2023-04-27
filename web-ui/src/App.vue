@@ -1,13 +1,15 @@
 <!--
  * @Author: Hui Tong <937013596@qq.com>
  * @Date: 2023-01-02 00:45:43
- * @LastEditTime: 2023-01-02 01:10:58
+ * @LastEditTime: 2023-01-02 23:09:49
  * @Description: 
 -->
 <template>
 	<v-app id="app">
 		<TopBarVue></TopBarVue>
-		<router-view></router-view>
+		<v-content>
+			<router-view></router-view>
+		</v-content>
 		<FooterBarVue></FooterBarVue>
 	</v-app>
 </template>
